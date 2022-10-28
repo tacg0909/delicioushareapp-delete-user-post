@@ -10,7 +10,7 @@ import (
 )
 
 func deleteOutline(postId string, userId string, postedTime string) error {
-    err := deleteS3Object(fmt.Sprintf("small/%s", postId))
+    err := deleteS3Object(fmt.Sprintf("small/%s.jpg", postId))
     if err != nil {
         return err
     }

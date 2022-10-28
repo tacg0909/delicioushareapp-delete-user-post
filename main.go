@@ -16,6 +16,9 @@ type SearchQuery struct {
 
 func MeshiteroDeletePost(q SearchQuery) error {
     err := deleteDetail(q.PostId)
+    if err != nil {
+        return err
+    }
     err = deleteOutline(q.PostId, q.UserId, q.PostedTime)
     return err
 }

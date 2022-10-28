@@ -10,7 +10,7 @@ import (
 )
 
 func deleteDetail(postId string) error {
-    err := deleteS3Object(fmt.Sprintf("large/%s", postId))
+    err := deleteS3Object(fmt.Sprintf("large/%s.jpg", postId))
     if err != nil {
         return err
     }
