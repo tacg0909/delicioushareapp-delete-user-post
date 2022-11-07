@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-    lambda.Start(MeshiteroDeletePost)
+    lambda.Start(delicioushareappDeleteUserPost)
 }
 
 type SearchQuery struct {
@@ -14,7 +14,7 @@ type SearchQuery struct {
     PostedTime string `json:"postedTime"`
 }
 
-func MeshiteroDeletePost(q SearchQuery) error {
+func delicioushareappDeleteUserPost(q SearchQuery) error {
     err := deleteDetail(q.PostId)
     if err != nil {
         return err
